@@ -1,3 +1,5 @@
+![Enterprise AI Data Copilot Suite](assets/hero-banner.svg)
+
 # Enterprise AI Data Copilot Suite
 
 An agentic AI platform that helps organizations **understand, govern, and analyze enterprise data through natural language.** It combines AI-powered data quality assessment, metadata discovery, natural-language-to-SQL analytics, and governance/compliance scanning into a single conversational assistant — built on a regulated-industry (pharma/GxP) dataset to demonstrate production-grade data trust, not just demo-ware.

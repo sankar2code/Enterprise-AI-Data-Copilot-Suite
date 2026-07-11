@@ -1,0 +1,144 @@
+<svg viewBox="0 0 820 1080" xmlns="http://www.w3.org/2000/svg" font-family="'SF Mono','JetBrains Mono',ui-monospace,Menlo,monospace">
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#1c2a38" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="cardGlowM1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0a75a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f0a75a" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="1080" fill="#0a121c"/>
+  <rect width="820" height="1080" fill="url(#grid)"/>
+
+  <!-- top bar -->
+  <line x1="52" y1="60" x2="80" y2="60" stroke="#3fd6bf" stroke-width="1.5"/>
+  <text x="92" y="64" font-size="11" letter-spacing="2.5" fill="#7fb8ad">AGENTIC AI SYSTEM &#183; REGULATED DATA</text>
+  <text x="768" y="64" font-size="11" letter-spacing="1.5" fill="#5b6b78" text-anchor="end">V0.1 &#183; PORTFOLIO</text>
+
+  <!-- title -->
+  <text x="50" y="132" font-size="48" font-weight="700" fill="#eef3f6">Enterprise AI</text>
+  <text x="50" y="188" font-size="48" font-weight="700" fill="#3fd6bf">Data Copilot Suite</text>
+
+  <!-- subtitle -->
+  <text x="52" y="232" font-size="15" fill="#9aa8b3">Four coordinated agents that <tspan font-weight="700" fill="#eef3f6">watch, catalog, query, and govern</tspan> enterprise data &#8212;</text>
+  <text x="52" y="255" font-size="15" fill="#9aa8b3">architected for GxP-grade, regulated environments where a wrong answer isn't a bug,</text>
+  <text x="52" y="278" font-size="15" fill="#9aa8b3">it's a compliance event.</text>
+
+  <!-- request flow label -->
+  <text x="52" y="326" font-size="11" letter-spacing="2.5" fill="#5b6b78">REQUEST FLOW</text>
+
+  <!-- request flow row -->
+  <rect x="52" y="342" width="88" height="34" rx="8" fill="#0d2420" stroke="#3fd6bf" stroke-width="1.2"/>
+  <text x="96" y="363" font-size="13" fill="#3fd6bf" text-anchor="middle">You ask</text>
+
+  <line x1="140" y1="359" x2="228" y2="359" stroke="#2a3a46" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="228" y="342" width="112" height="34" rx="8" fill="#101b26" stroke="#26333e" stroke-width="1.2"/>
+  <text x="284" y="363" font-size="13" fill="#c3ccd4" text-anchor="middle">n8n routes</text>
+
+  <line x1="340" y1="359" x2="428" y2="359" stroke="#2a3a46" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="428" y="342" width="128" height="34" rx="8" fill="#101b26" stroke="#26333e" stroke-width="1.2"/>
+  <text x="492" y="363" font-size="13" fill="#c3ccd4" text-anchor="middle">Agent reasons</text>
+
+  <line x1="556" y1="359" x2="644" y2="359" stroke="#2a3a46" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="644" y="342" width="124" height="34" rx="8" fill="#101b26" stroke="#26333e" stroke-width="1.2"/>
+  <text x="706" y="363" font-size="13" fill="#c3ccd4" text-anchor="middle">Data answers</text>
+
+  <!-- orchestration bar -->
+  <rect x="52" y="398" width="716" height="52" rx="10" fill="#0f1922" stroke="#22303b" stroke-width="1"/>
+  <circle cx="76" cy="424" r="4" fill="#f0a75a"/>
+  <text x="90" y="428" font-size="11" letter-spacing="2" fill="#f0a75a">ORCHESTRATION</text>
+  <text x="212" y="429" font-size="16" font-weight="700" fill="#eef3f6">n8n</text>
+  <text x="350" y="428" font-size="12.5" fill="#8b98a3">supervisor routes &#183; schedules scans &#183; logs every step</text>
+
+  <!-- mcp bridge pill -->
+  <rect x="358" y="464" width="104" height="22" rx="11" fill="#0f1922" stroke="#2a3a46" stroke-width="1"/>
+  <text x="410" y="479" font-size="10.5" letter-spacing="1.5" fill="#7c8a96" text-anchor="middle">MCP BRIDGE</text>
+
+  <!-- module cards -->
+  <g>
+    <rect x="52" y="504" width="168" height="148" rx="12" fill="#0f1922" stroke="url(#cardGlowM1)" stroke-width="1.6"/>
+    <text x="72" y="530" font-size="10" letter-spacing="1.5" fill="#5b6b78">M1</text>
+    <text x="72" y="556" font-size="15.5" font-weight="700" fill="#3fd6bf">Data Quality</text>
+    <text x="72" y="578" font-size="12" fill="#9aa8b3">Flags nulls, drift &amp;</text>
+    <text x="72" y="595" font-size="12" fill="#9aa8b3">duplicates, then</text>
+    <text x="72" y="612" font-size="12" fill="#9aa8b3">recommends fixes.</text>
+    <rect x="72" y="626" width="112" height="20" rx="10" fill="#132a26" stroke="#1f4a42" stroke-width="1"/>
+    <text x="128" y="640" font-size="10" fill="#6fc9b8" text-anchor="middle">ydata-profiling</text>
+  </g>
+
+  <g>
+    <rect x="228" y="504" width="168" height="148" rx="12" fill="#0f1922" stroke="#22303b" stroke-width="1.2"/>
+    <text x="248" y="530" font-size="10" letter-spacing="1.5" fill="#5b6b78">M2</text>
+    <text x="248" y="556" font-size="15.5" font-weight="700" fill="#3fd6bf">Data Catalog</text>
+    <text x="248" y="578" font-size="12" fill="#9aa8b3">Answers on datasets,</text>
+    <text x="248" y="595" font-size="12" fill="#9aa8b3">ownership &amp; lineage.</text>
+    <rect x="248" y="626" width="84" height="20" rx="10" fill="#132a26" stroke="#1f4a42" stroke-width="1"/>
+    <text x="290" y="640" font-size="10" fill="#6fc9b8" text-anchor="middle">hybrid RAG</text>
+  </g>
+
+  <g>
+    <rect x="404" y="504" width="168" height="148" rx="12" fill="#0f1922" stroke="#22303b" stroke-width="1.2"/>
+    <text x="424" y="530" font-size="10" letter-spacing="1.5" fill="#5b6b78">M3</text>
+    <text x="424" y="556" font-size="15.5" font-weight="700" fill="#3fd6bf">Analytics</text>
+    <text x="424" y="578" font-size="12" fill="#9aa8b3">Turns plain English into</text>
+    <text x="424" y="595" font-size="12" fill="#9aa8b3">validated SQL, charts &amp;</text>
+    <text x="424" y="612" font-size="12" fill="#9aa8b3">insight.</text>
+    <rect x="424" y="626" width="98" height="20" rx="10" fill="#132a26" stroke="#1f4a42" stroke-width="1"/>
+    <text x="473" y="640" font-size="10" fill="#6fc9b8" text-anchor="middle">sqlglot guard</text>
+  </g>
+
+  <g>
+    <rect x="580" y="504" width="188" height="148" rx="12" fill="#0f1922" stroke="#22303b" stroke-width="1.2"/>
+    <text x="600" y="530" font-size="10" letter-spacing="1.5" fill="#5b6b78">M4</text>
+    <text x="600" y="556" font-size="15.5" font-weight="700" fill="#3fd6bf">Governance</text>
+    <text x="600" y="578" font-size="12" fill="#9aa8b3">Detects PII/PHI,</text>
+    <text x="600" y="595" font-size="12" fill="#9aa8b3">classifies, writes</text>
+    <text x="600" y="612" font-size="12" fill="#9aa8b3">compliance reports.</text>
+    <rect x="600" y="626" width="70" height="20" rx="10" fill="#132a26" stroke="#1f4a42" stroke-width="1"/>
+    <text x="635" y="640" font-size="10" fill="#6fc9b8" text-anchor="middle">Presidio</text>
+  </g>
+
+  <!-- data substrate bar -->
+  <rect x="52" y="676" width="716" height="52" rx="10" fill="#0f1922" stroke="#22303b" stroke-width="1"/>
+  <text x="76" y="698" font-size="11" letter-spacing="2" fill="#7fb8ad">DATA SUBSTRATE</text>
+  <text x="76" y="719" font-size="16" font-weight="700" fill="#eef3f6">Postgres + pgvector</text>
+  <text x="392" y="708" font-size="12.5" fill="#8b98a3">relational &#183; metadata &#183; embeddings &#183; one store</text>
+
+  <!-- bottom two column -->
+  <rect x="52" y="748" width="344" height="150" rx="12" fill="#0f1922" stroke="#22303b" stroke-width="1"/>
+  <text x="76" y="776" font-size="10.5" letter-spacing="1.5" fill="#f0a75a">THE PATTERN</text>
+  <text x="76" y="802" font-size="12.5" fill="#c3ccd4">Every agent pairs a <tspan font-weight="700" fill="#eef3f6">deterministic engine</tspan></text>
+  <text x="76" y="822" font-size="12.5" fill="#c3ccd4">with an <tspan font-weight="700" fill="#eef3f6">LLM layer</tspan>. The engine finds ground</text>
+  <text x="76" y="842" font-size="12.5" fill="#c3ccd4">truth; the model explains, classifies,</text>
+  <text x="76" y="862" font-size="12.5" fill="#c3ccd4">and narrates. No model counting nulls</text>
+  <text x="76" y="882" font-size="12.5" fill="#c3ccd4">or guessing at PII &#8212; that's the line</text>
+
+  <rect x="424" y="748" width="344" height="150" rx="12" fill="#0f1922" stroke="#22303b" stroke-width="1"/>
+  <text x="448" y="776" font-size="10.5" letter-spacing="1.5" fill="#f0a75a">COMPLIANCE MAPPED</text>
+
+  <rect x="448" y="792" width="70" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="483" y="808" font-size="11" fill="#c3ccd4" text-anchor="middle">HIPAA</text>
+  <rect x="524" y="792" width="70" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="559" y="808" font-size="11" fill="#c3ccd4" text-anchor="middle">GDPR</text>
+  <rect x="600" y="792" width="120" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="660" y="808" font-size="11" fill="#c3ccd4" text-anchor="middle">21 CFR Part 11</text>
+
+  <rect x="448" y="824" width="58" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="477" y="840" font-size="11" fill="#c3ccd4" text-anchor="middle">GxP</text>
+  <rect x="512" y="824" width="82" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="553" y="840" font-size="11" fill="#c3ccd4" text-anchor="middle">PII / PHI</text>
+  <rect x="600" y="824" width="100" height="24" rx="6" fill="#101b26" stroke="#2a3a46" stroke-width="1"/>
+  <text x="650" y="840" font-size="11" fill="#c3ccd4" text-anchor="middle">data lineage</text>
+
+  <!-- stack footer -->
+  <line x1="52" y1="928" x2="768" y2="928" stroke="#1c2a38" stroke-width="1"/>
+  <text x="52" y="958" font-size="11.5" fill="#5b6b78">STACK&#160;&#160;n8n / Langflow / MCP / Postgres + pgvector / Presidio / Claude API / Next.js</text>
+
+  <!-- author footer -->
+  <line x1="52" y1="1000" x2="768" y2="1000" stroke="#1c2a38" stroke-width="1"/>
+  <text x="52" y="1030" font-size="14.5" font-weight="700" fill="#eef3f6">Sankar Kumar Palaniappan</text>
+  <text x="300" y="1030" font-size="12.5" fill="#7c8a96">Product &#183; GenAI &#183; Life Sciences</text>
+  <text x="768" y="1030" font-size="13" fill="#3fd6bf" text-anchor="end">sankar.work</text>
+</svg>
