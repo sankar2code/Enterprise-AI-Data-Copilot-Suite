@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-labelledby="t d">
+<title id="t">Enterprise AI Data Copilot Suite — system architecture</title>
+<desc id="d">Six layers from interface down to storage. An n8n supervisor routes over an MCP bridge to four stateless Langflow agents, each backed by a deterministic engine. A semantic layer fed by pluggable domain packs sits above a control plane and a read-only data plane. Audit, RBAC and observability span all layers.</desc>
+
+<style>
+  .bg{fill:#0B141C}
+  .panel{fill:#101E2A;stroke:#22394A;stroke-width:1}
+  .panel2{fill:#0E1A24;stroke:#22394A;stroke-width:1}
+  .amber{stroke:#F2B441;stroke-width:1.2;fill:#101E2A}
+  .teal{stroke:#48C6B4;stroke-width:1.2;fill:#101E2A}
+  .h{font-family:'Space Grotesk','Segoe UI',sans-serif;font-weight:600;font-size:15px;fill:#E9F1F4}
+  .lay{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;fill:#5E7885}
+  .lay-a{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;fill:#F2B441}
+  .lay-t{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;fill:#48C6B4}
+  .s{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#88A2AF}
+  .ag{font-family:'Space Grotesk','Segoe UI',sans-serif;font-weight:600;font-size:13px;fill:#48C6B4}
+  .eng{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#88A2AF}
+  .arr{stroke:#22394A;stroke-width:1.4;fill:none}
+  .arrt{stroke:#48C6B4;stroke-width:1.2;fill:none;opacity:.55}
+  .note{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#5E7885}
+  .grid{stroke:#182A38;stroke-width:1}
+</style>
+
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#22394A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#48C6B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect class="bg" x="0" y="0" width="960" height="640" rx="12"/>
+<g opacity=".45">
+  <path class="grid" d="M0 40H960M0 80H960M0 120H960M0 160H960M0 200H960M0 240H960M0 280H960M0 320H960M0 360H960M0 400H960M0 440H960M0 480H960M0 520H960M0 560H960M0 600H960"/>
+  <path class="grid" d="M40 0V640M80 0V640M120 0V640M160 0V640M200 0V640M240 0V640M280 0V640M320 0V640M360 0V640M400 0V640M440 0V640M480 0V640M520 0V640M560 0V640M600 0V640M640 0V640M680 0V640M720 0V640M760 0V640M800 0V640M840 0V640M880 0V640M920 0V640"/>
+</g>
+
+<!-- ===== INTERFACE ===== -->
+<text class="lay" x="26" y="46">INTERFACE</text>
+<rect class="panel" x="132" y="26" width="726" height="40" rx="8"/>
+<text class="h" x="152" y="51">Chat UI (Next.js)</text>
+<text class="s" x="300" y="51">·   REST API   ·   Scheduled triggers</text>
+
+<line class="arr" x1="495" y1="66" x2="495" y2="92" marker-end="url(#a)"/>
+
+<!-- ===== ORCHESTRATION ===== -->
+<text class="lay-a" x="26" y="114">ORCHESTRATION</text>
+<rect class="amber" x="132" y="94" width="726" height="44" rx="8"/>
+<text class="h" x="152" y="121">n8n supervisor</text>
+<text class="s" x="290" y="121">routes  ·  HITL approval  ·  retries  ·  emits audit</text>
+
+<!-- ===== MCP BRIDGE ===== -->
+<line class="arrt" x1="226" y1="138" x2="226" y2="176" marker-end="url(#at)"/>
+<line class="arrt" x1="408" y1="138" x2="408" y2="176" marker-end="url(#at)"/>
+<line class="arrt" x1="590" y1="138" x2="590" y2="176" marker-end="url(#at)"/>
+<line class="arrt" x1="772" y1="138" x2="772" y2="176" marker-end="url(#at)"/>
+<rect x="447" y="148" width="96" height="18" rx="9" fill="#0B141C" stroke="#22394A"/>
+<text class="note" x="461" y="160">MCP  BRIDGE</text>
+
+<!-- ===== AGENTS ===== -->
+<text class="lay-t" x="26" y="196">AGENTS</text>
+<text class="note" x="26" y="212">Langflow</text>
+<text class="note" x="26" y="226">stateless</text>
+
+<rect class="teal" x="140" y="178" width="172" height="48" rx="8"/>
+<text class="ag" x="156" y="199">Data Quality</text>
+<text class="eng" x="156" y="216">profile · drift</text>
+
+<rect class="teal" x="322" y="178" width="172" height="48" rx="8"/>
+<text class="ag" x="338" y="199">Catalog</text>
+<text class="eng" x="338" y="216">hybrid retrieval</text>
+
+<rect class="teal" x="504" y="178" width="172" height="48" rx="8"/>
+<text class="ag" x="520" y="199">Analytics</text>
+<text class="eng" x="520" y="216">NL &#8594; safe SQL</text>
+
+<rect class="teal" x="686" y="178" width="172" height="48" rx="8"/>
+<text class="ag" x="702" y="199">Governance</text>
+<text class="eng" x="702" y="216">classify · report</text>
+
+<line class="arr" x1="226" y1="226" x2="226" y2="252" marker-end="url(#a)"/>
+<line class="arr" x1="408" y1="226" x2="408" y2="252" marker-end="url(#a)"/>
+<line class="arr" x1="590" y1="226" x2="590" y2="252" marker-end="url(#a)"/>
+<line class="arr" x1="772" y1="226" x2="772" y2="252" marker-end="url(#a)"/>
+
+<!-- ===== ENGINES ===== -->
+<text class="lay" x="26" y="272">DETERMINISTIC</text>
+<text class="lay" x="26" y="286">ENGINES</text>
+
+<rect class="panel" x="140" y="254" width="172" height="40" rx="8"/>
+<text class="eng" x="156" y="278">ydata-profiling</text>
+<rect class="panel" x="322" y="254" width="172" height="40" rx="8"/>
+<text class="eng" x="338" y="278">lineage resolver</text>
+<rect class="panel" x="504" y="254" width="172" height="40" rx="8"/>
+<text class="eng" x="520" y="278">sqlglot validator</text>
+<rect class="panel" x="686" y="254" width="172" height="40" rx="8"/>
+<text class="eng" x="702" y="278">Presidio + NER</text>
+
+<text class="note" x="140" y="314">engines own ground truth   ·   the LLM only explains, classifies, narrates</text>
+
+<line class="arr" x1="495" y1="322" x2="495" y2="348" marker-end="url(#a)"/>
+
+<!-- ===== SEMANTIC LAYER ===== -->
+<text class="lay" x="26" y="368">SEMANTIC</text>
+<text class="lay" x="26" y="382">LAYER</text>
+<rect class="panel" x="132" y="350" width="590" height="46" rx="8"/>
+<text class="h" x="152" y="378">catalog · glossary · policies · classifiers</text>
+
+<!-- ===== DOMAIN PACKS ===== -->
+<rect class="amber" x="740" y="344" width="118" height="58" rx="8"/>
+<text class="lay-a" x="754" y="362">DOMAIN PACKS</text>
+<text class="eng" x="754" y="378">life-sciences</text>
+<text class="eng" x="754" y="393">finance · retail</text>
+<line class="arr" x1="738" y1="373" x2="726" y2="373" marker-end="url(#a)"/>
+<text class="note" x="740" y="416">config, not code</text>
+
+<line class="arr" x1="300" y1="396" x2="300" y2="440" marker-end="url(#a)"/>
+<line class="arr" x1="640" y1="396" x2="640" y2="440" marker-end="url(#a)"/>
+
+<!-- ===== STORAGE ===== -->
+<text class="lay" x="26" y="466">STORAGE</text>
+
+<rect class="panel2" x="132" y="442" width="348" height="98" rx="10"/>
+<text class="lay-t" x="152" y="466">CONTROL PLANE</text>
+<text class="h" x="152" y="492">Postgres + pgvector</text>
+<text class="eng" x="152" y="512">metadata · findings · embeddings</text>
+<text class="eng" x="152" y="529">audit_event (append-only)</text>
+
+<rect class="panel2" x="510" y="442" width="348" height="98" rx="10"/>
+<text class="lay-t" x="530" y="466">DATA PLANE  ·  READ-ONLY</text>
+<text class="h" x="530" y="492">Customer sources</text>
+<text class="eng" x="530" y="512">Postgres · Snowflake · BigQuery</text>
+<text class="eng" x="530" y="529">S3 / Parquet · SaaS APIs</text>
+
+<text class="note" x="510" y="558">data never leaves the customer boundary</text>
+
+<!-- ===== AUDIT SPINE ===== -->
+<rect class="amber" x="886" y="94" width="44" height="446" rx="8" opacity=".95"/>
+<text class="lay-a" x="908" y="317" transform="rotate(-90 908 317)" text-anchor="middle">AUDIT  ·  RBAC  ·  OBSERVABILITY</text>
+
+<!-- ===== FOOTER ===== -->
+<line x1="26" y1="586" x2="934" y2="586" stroke="#22394A"/>
+<text class="note" x="26" y="608">Enterprise AI Data Copilot Suite — system architecture v0.1</text>
+<text class="note" x="672" y="608">Sankar Kumar Palaniappan · sankar.work</text>
+</svg>
